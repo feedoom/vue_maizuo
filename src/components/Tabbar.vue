@@ -3,15 +3,15 @@
     <ul>
       <router-link tag="li" activeClass="myactive" to="/film">
         <i class="iconfont icon-set"></i>
-        film
+        电影
       </router-link>
       <router-link tag="li" activeClass="myactive" to="/cinema">
         <i class="iconfont icon-set"></i>
-        cinema
+        影院
       </router-link>
       <router-link tag="li" activeClass="myactive" to="/center">
         <i class="iconfont icon-set"></i>
-        center
+        我的
       </router-link>
     </ul>
   </nav>
@@ -22,6 +22,7 @@
   color: red;
 }
 nav {
+  z-index: 1;
   position: fixed;
   bottom: 0px;
   left: 0px;
