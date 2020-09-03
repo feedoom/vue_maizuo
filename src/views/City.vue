@@ -22,14 +22,7 @@ export default {
   data() {
     return {
       //城市数据
-      datalist: [
-        {
-          a: []
-        },
-        {
-          b: []
-        }
-      ]
+      datalist: []
     }
   },
   methods: {

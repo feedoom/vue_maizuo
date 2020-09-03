@@ -15,6 +15,9 @@ export default {
     return {}
   },
   methods: {},
+  created() {
+    localStorage.setItem('cityId', 440100)
+  },
   computed: {
     ...mapState(['isTabbarShow'])
   },

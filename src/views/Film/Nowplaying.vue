@@ -92,7 +92,7 @@ ul {
     }
     p {
       overflow: hidden;
-      text-overflow: ellipsis; //溢出用省略号显示
+      text-overflow: ellipsis;
       white-space: nowrap;
       margin: 6px 6px;
       color: #797d82;
@@ -100,12 +100,12 @@ ul {
     }
     .buy {
       position: absolute;
+      right: 5%;
+      top: 12%;
       color: orange;
       border: 1px solid orange;
       width: 35px;
       height: 25px;
-      right: 5%;
-      top: 12%;
       font-size: 13px;
       line-height: 25px;
       text-align: center;
