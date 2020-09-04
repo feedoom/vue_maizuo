@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- 首页轮播图 -->
     <swiper :key="looplist.length" ref="myswiper" class="loopswiper">
       <div class="swiper-slide" v-for="data in looplist" :key="data.filmId">
         <img :src="data.poster" class="poster" />
@@ -69,7 +70,8 @@ export default {
 
 <style lang="scss" scoped>
 .loopswiper {
-  width: 360px;
+  // width: 360px;
+  width: 100%;
   height: 202px;
 }
 </style>
