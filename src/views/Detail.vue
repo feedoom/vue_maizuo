@@ -241,6 +241,9 @@ export default {
     padding-left: 15px;
     padding-right: 15px;
     .actors-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       padding-top: 10px;
       font-size: 12px;
       color: #191a1b;
@@ -249,6 +252,9 @@ export default {
       text-align: center;
     }
     .actors-role {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       text-align: center;
       width: 85px;
       height: 18px;

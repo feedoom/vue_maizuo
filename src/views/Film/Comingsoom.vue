@@ -108,6 +108,7 @@ ul {
       float: left;
       margin-right: 8px;
       height: 120px;
+      width: 90px;
     }
     p {
       overflow: hidden;
