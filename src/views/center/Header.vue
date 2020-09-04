@@ -11,7 +11,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: '喵喵电影'
+      default: '电影'
     }
   }
 }

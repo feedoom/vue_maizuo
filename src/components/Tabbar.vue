@@ -2,16 +2,16 @@
   <nav>
     <ul>
       <router-link tag="li" activeClass="myactive" to="/film">
-        <i class="iconfont icon-set"></i>
-        电影
+        <i class="iconfont icon-dianying2"></i>
+        <p>电影</p>
       </router-link>
       <router-link tag="li" activeClass="myactive" to="/cinema">
-        <i class="iconfont icon-set"></i>
-        影院
+        <i class="iconfont icon-yingyuan1"></i>
+        <p>影院</p>
       </router-link>
       <router-link tag="li" activeClass="myactive" to="/center">
-        <i class="iconfont icon-set"></i>
-        我的
+        <i class="iconfont icon-wode"></i>
+        <p>我的</p>
       </router-link>
     </ul>
   </nav>
@@ -27,14 +27,23 @@ nav {
   bottom: 0px;
   left: 0px;
   width: 100%;
-  height: 50px;
+  // height: 50px;
   background-color: white;
   ul {
     display: flex;
+
+    .iconfont {
+      font-size: 20px;
+    }
     li {
       flex: 1;
-      line-height: 50px;
+      // line-height: 50px;
       text-align: center;
+      margin: 3px 3px;
+      p {
+        font-size: 10px;
+        color: #797d82;
+      }
     }
   }
 }

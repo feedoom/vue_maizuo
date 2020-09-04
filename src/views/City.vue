@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="currentCity">当前城市 - {{ currentCity }}</div>
     <mt-index-list ref="mylist">
       <mt-index-section
         :index="data.index"
@@ -9,7 +10,7 @@
         <div
           v-for="city in data.list"
           :key="city.cityId"
-          @click="handleClick(city.cityId)"
+          @click="handleClick(city.cityId, city.name)"
         >
           <mt-cell :title="city.name"></mt-cell>
         </div>
@@ -22,7 +23,8 @@ export default {
   data() {
     return {
       //城市数据
-      datalist: []
+      datalist: [],
+      currentCity: ''
     }
   },
   methods: {
@@ -61,12 +63,14 @@ export default {
       }
       return newlist
     },
-    handleClick(id) {
+    handleClick(id, name) {
       localStorage.setItem('cityId', id)
-      this.$router.push('/cinema')
+      localStorage.setItem('cityName', name)
+      this.$router.push('/film')
     }
   },
   mounted() {
+    this.currentCity = localStorage.getItem('cityName')
     // 处理滚动条bug
     this.$refs.mylist.$el.style.height =
       document.documentElement.clientHeight - 50 + 'px'
@@ -74,4 +78,12 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.currentCity {
+  font-size: 17px;
+  color: #191a1b;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+}
+</style>

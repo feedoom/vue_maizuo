@@ -1,0 +1,27 @@
+.mint-indexlist-nav {
+  border-left: 0;
+  width: 17px;
+  margin-top: 94px;
+}
+
+.mint-indexsection-index {
+  background-color: #f4f4f4;
+  font-size: 12px;
+  color: #797d82;
+  padding: 0 0 0 15px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.mint-cell {
+  border: 0;
+}
+
+.mint-cell-wrapper {
+  background-image: none;
+  background-color: #fff;
+  height: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  padding-left: 20px;
+}

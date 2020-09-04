@@ -5,6 +5,7 @@ import store from './store'
 import axios from 'axios'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import './assets/css/mintIndexList.css'
 
 Vue.use(MintUI)
 

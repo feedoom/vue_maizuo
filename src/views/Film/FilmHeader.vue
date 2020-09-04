@@ -1,5 +1,15 @@
 <template>
-  <div>
+  <div class="main">
+    <div class="header" v-show="isFilmHeaderShow">
+      <span class="city" @click="handleCity">
+        {{ cityName }}
+
+        <i class="iconfont icon-arrow-down"></i>
+      </span>
+      <div class="title">
+        电影
+      </div>
+    </div>
     <ul>
       <router-link to="/film/nowplaying" tag="li" activeClass="active"
         >正在热映</router-link
@@ -10,10 +20,57 @@
     </ul>
   </div>
 </template>
+<script>
+import { mapState } from 'vuex'
+export default {
+  data() {
+    return {
+      cityName: ''
+    }
+  },
+  methods: {
+    handleCity() {
+      this.$router.push('/city')
+    }
+  },
+  mounted() {
+    this.cityName = localStorage.getItem('cityName')
+  },
+  computed: {
+    ...mapState(['isFilmHeaderShow'])
+  }
+}
+</script>
 
 <style lang="scss" scoped>
-div {
+.main {
   z-index: 2;
+}
+.header {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  // height: 44px;
+  // line-height: 44px;
+  text-align: center;
+  padding-bottom: 5px;
+  // background-color: #fff;
+  .title {
+    text-align: center;
+    font-size: 17px;
+    color: #191a1b;
+  }
+  .city {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 13px;
+    .icon-arrow-down {
+      position: absolute;
+      left: 30px;
+      top: 3px;
+      font-size: 5px;
+    }
+  }
 }
 ul {
   display: flex;

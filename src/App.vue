@@ -17,6 +17,7 @@ export default {
   methods: {},
   created() {
     localStorage.setItem('cityId', 440100)
+    localStorage.setItem('cityName', '广州')
   },
   computed: {
     ...mapState(['isTabbarShow'])

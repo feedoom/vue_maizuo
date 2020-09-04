@@ -1,6 +1,6 @@
 <template>
   <div id="main">
-    <Header title="我的喵喵"> </Header>
+    <Header title="我的账号"> </Header>
     <Login> </Login>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: '喵喵电影'
+      default: '电影'
     }
   }
 }
