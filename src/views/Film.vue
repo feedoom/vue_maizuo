@@ -1,8 +1,8 @@
 <template>
   <div>
-    <swiper :key="looplist.length" ref="myswiper">
-      <div class="swiper-slide" v-for="data in looplist" :key="data.pID">
-        <img :src="data.h5pics.highResolutionH" />
+    <swiper :key="looplist.length" ref="myswiper" class="loopswiper">
+      <div class="swiper-slide" v-for="data in looplist" :key="data.filmId">
+        <img :src="data.poster" class="poster" />
       </div>
     </swiper>
 
@@ -28,11 +28,15 @@ export default {
   methods: {
     getLooplist() {
       this.$http({
-        url:
-          '/gateway/display/v3/static/3f20147482494cbeb5728ad133ad5398/c71f93acb12b48dc827df588c3ab30dd/382cb210acbe44ea886ce55774c0429e'
+        url: `https://m.maizuo.com/gateway?cityId=440100&pageNum=1&pageSize=10&type=1`,
+        headers: {
+          'X-Client-Info':
+            '{"a":"3000","ch":"1002","v":"5.0.4","e":"1598756938202855600357377","bc":"440100"}',
+          'X-Host': 'mall.film-ticket.film.list'
+        }
       }).then(res => {
-        // console.log(res.data.body.data.slice(0, 6))
-        this.looplist = res.data.body.data.slice(0, 6)
+        console.log(res.data.data.films.slice(0, 6))
+        this.looplist = res.data.data.films.slice(0, 6)
       })
     },
     handleScroll() {
@@ -50,8 +54,16 @@ export default {
     this.getLooplist()
     window.onscroll = this.handleScroll
   },
+
   beforeDestroy() {
     window.onscroll = null
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.loopswiper {
+  width: 360px;
+  height: 202px;
+}
+</style>
