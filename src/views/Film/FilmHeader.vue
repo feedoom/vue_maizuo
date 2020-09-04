@@ -52,8 +52,7 @@ export default {
   // height: 44px;
   // line-height: 44px;
   text-align: center;
-  padding-bottom: 5px;
-  // background-color: #fff;
+  // padding-bottom: 5px;
   .title {
     text-align: center;
     font-size: 17px;
