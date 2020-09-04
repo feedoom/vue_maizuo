@@ -1,12 +1,14 @@
 <template>
-  <div class="cinema" :style="mystyle">
+  <div class="cinema">
     <div class="title">影院</div>
     <ul>
       <li v-for="data in datalist" :key="data.cinemaId">
+        <!-- 地址 -->
         <div class="addressInfo">
           <p class="name">{{ data.name }}</p>
           <p class="address">{{ data.address }}</p>
         </div>
+        <!-- 价格 -->
         <p class="price">
           <span style="font-size: 12px;">￥</span>
           <span style="font-size: 15px;">{{
@@ -20,7 +22,6 @@
 </template>
 
 <script>
-import BetterScroll from 'better-scroll'
 export default {
   data() {
     return {
@@ -40,20 +41,10 @@ export default {
         }
       }).then(res => {
         this.datalist = res.data.data.cinemas
-
-        this.$nextTick(() => {
-          new BetterScroll('.cinema', {
-            scrollbar: {
-              fade: true,
-              interactive: false
-            }
-          })
-        })
       })
     }
   },
   mounted() {
-    this.mystyle.height = document.documentElement.clientHeight - 50 + 'px'
     let id = localStorage.getItem('cityId')
     this.getDataList(id)
   },
@@ -102,7 +93,6 @@ li {
   }
 }
 .cinema {
-  height: 500px;
   overflow: hidden;
   position: relative;
 }

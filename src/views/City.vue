@@ -66,6 +66,7 @@ export default {
     handleClick(id, name) {
       localStorage.setItem('cityId', id)
       localStorage.setItem('cityName', name)
+      this.$store.commit('filmHeaderHidden')
       this.$router.push('/film')
     }
   },
