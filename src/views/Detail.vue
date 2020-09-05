@@ -196,9 +196,9 @@ export default {
       color: #fff;
       background-color: #d2d6dc;
       height: 14px;
-      position: absolute;
-      left: 45%;
-      top: 25%;
+      // position: absolute;
+      // left: 45%;
+      // top: 25%;
       line-height: 14px;
       padding: 0 2px;
       border-radius: 2px;
