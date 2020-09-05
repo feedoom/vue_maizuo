@@ -1,7 +1,7 @@
 <template>
   <div>
-    <tabbar v-show="isTabbarShow"></tabbar>
-    <section>
+    <tabbar v-show="isTabbarShow" ref="tabbar"></tabbar>
+    <section ref="mainRouter">
       <router-view></router-view>
     </section>
   </div>
@@ -18,6 +18,18 @@ export default {
   created() {
     localStorage.setItem('cityId', 440100)
     localStorage.setItem('cityName', '广州')
+  },
+  mounted() {
+    // console.log(1)
+    // // this.$refs.mainRouter.style.height = 1000 + 'px'
+    // // this.$refs.mainRouter.offsetHeight -= 38
+    // let tabHeight = this.$refs.tabbar.$el.offsetHeight
+    // let routerHeight = this.$refs.mainRouter.offsetHeight
+    // console.log(tabHeight, routerHeight)
+    // this.$refs.mainRouter.style.height = routerHeight - tabHeight + 'px'
+    // // console.log(this.$refs.tabbar.$el.offsetHeight)
+    // // console.log(this.$refs.mainRouter.offsetHeight)
+    // console.log(1)
   },
   computed: {
     ...mapState(['isTabbarShow'])

@@ -23,7 +23,7 @@
           </span>
         </p>
         <p v-else><br /></p>
-        <p>主演：{{ data.actors | actorfilter }}</p>
+        <p v-if="data.actors">主演：{{ data.actors | actorfilter }}</p>
         <p>{{ data.nation }} | {{ data.runtime }}分钟</p>
         <div class="buy">购票</div>
       </li>
@@ -72,7 +72,8 @@ export default {
   },
   filters: {
     actorfilter(data) {
-      return data.map(item => item.name).join(' ')
+      // return data.map(item => item.name).join(' ')
+      return data ? data.map(item => item.name).join(' ') : null
     }
   }
 }
@@ -119,7 +120,8 @@ ul {
         font-size: 9px;
         color: #fff;
         background-color: #d2d6dc;
-        height: 14px;
+        // height: 14px;
+        height: 100%;
         line-height: 14px;
         padding: 0 2px;
         border-radius: 2px;
