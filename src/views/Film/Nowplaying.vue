@@ -116,13 +116,16 @@ ul {
       font-size: 16px;
       color: #191a1b;
       font-size: 16px;
+      height: 100%;
       .item {
         font-size: 9px;
         color: #fff;
         background-color: #d2d6dc;
         // height: 14px;
         height: 100%;
-        line-height: 14px;
+        // line-height: 14px;
+        text-align: center;
+        line-height: 100%;
         padding: 0 2px;
         border-radius: 2px;
       }

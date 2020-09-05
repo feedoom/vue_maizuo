@@ -65,8 +65,10 @@ export default {
     font-size: 13px;
     .icon-arrow-down {
       position: absolute;
-      left: 30px;
-      top: 3px;
+      // left: 30px;
+      left: 110%;
+      // top: 3px;
+      top: 20%;
       font-size: 5px;
     }
   }
