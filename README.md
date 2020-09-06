@@ -1,24 +1,33 @@
-# vue_maizuo
+# vue 仿卖座页面
 
-## Project setup
-```
-yarn install
-```
+## 主页
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+![](./show_pic/index.png)
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## 即将上映
 
-### Lints and fixes files
-```
-yarn lint
-```
+![](./show_pic/comingsoon.png)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 加载数据
+
+![](./show_pic/fimlload.png)
+
+## 详情页
+
+![](./show_pic/detail.png)
+
+## 没排期的电影
+
+![](./show_pic/detailOfNo.png)
+
+## 选择城市
+
+![](./show_pic/city.png)
+
+## 附近影院
+
+![](./show_pic/cinema.png)
+
+## 个人中心
+
+![](./show_pic/center.png)
