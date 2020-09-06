@@ -56,6 +56,7 @@ export default {
     let id = window.localStorage.getItem('cityId')
     this.getLooplist(id)
     window.onscroll = this.handleScroll
+    this.$store.commit('filmHeaderHidden')
   },
   beforeDestroy() {
     window.onscroll = null

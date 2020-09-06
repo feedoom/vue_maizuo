@@ -38,12 +38,12 @@ export default {
         }
       }).then(res => {
         this.datalist = this.handleCity(res.data.data.cities)
-        console.log(this.datalist)
+        // console.log(this.datalist)
       })
     },
     handleCity(datalist) {
       // 城市数据分类
-      console.log(datalist)
+      // console.log(datalist)
       let letterArr = []
       for (let i = 65; i < 91; i++) {
         letterArr.push(String.fromCharCode(i))
